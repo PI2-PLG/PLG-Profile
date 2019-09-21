@@ -12,13 +12,13 @@ services:
       - POSTGRES_USER=postgres
       - POSTGRES_DB=postgres
     ports:
-      - "5435:80"
+      - "5436:80"
   web:
     build: .
     command: ["sh", "scripts/start.sh"]
     volumes:
       - .:/code
     ports:
-      - "8000:8000"
+      - "8002:8000"
     depends_on:
       - profiledb
